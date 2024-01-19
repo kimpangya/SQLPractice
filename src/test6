@@ -1,0 +1,8 @@
+select NAME,NAMECNT
+from(
+    SELECT NAME, count(NAME) as NAMECNT
+    FROM ANIMAL_INS
+    group by NAME
+)sub1
+where NAMECNT>=2
+order by NAME
